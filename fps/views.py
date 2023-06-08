@@ -6,7 +6,7 @@ def index(request):
 
 def get_room_list(request):
     rooms=[]
-    for room in Rooms.objects.all().order_by('port'):
+    for room in Room.objects.all().order_by('port'):
         rooms.append({
             'name':room.name,
             'port':room.port
